@@ -1,0 +1,281 @@
+@charset "UTF-8";
+/* 변수 선언 */
+/* 공통스타일 선언 */
+.ck {
+  display: none; }
+
+.con {
+  display: block;
+  width: 100%; }
+
+.title {
+  font-size: 1.3rem;
+  text-align: center;
+  line-height: 2.5;
+  color: #999999; }
+
+.title::after {
+  content: '';
+  display: block;
+  clear: both;
+  width: 33%;
+  height: 1px;
+  background-color: black;
+  margin: 0 auto; }
+
+.comment {
+  font-family: sans-serif, serif;
+  font-size: 0.8rem;
+  line-height: 2.0;
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-weight: 100; }
+
+/* header 스타일 선언 */
+#hd {
+  display: block;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  box-shadow: 0px 1px 3px rgba(45, 63, 12, 0.7);
+  z-index: 3;
+  /* .fix_box end */ }
+#hd .fix_box {
+  display: block;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(45, 63, 12, 0.7);
+  /* .logo 끝 */
+  /* btn_box end */
+  /* .menu_box end */ }
+#hd .fix_box .logo {
+  display: block;
+  width: 80%;
+  height: 100%;
+  background-image: url("./img/logo/logo.png");
+  background-position: 10% center;
+  background-repeat: no-repeat;
+  float: left;
+  z-index: 5;
+  position: absolute;
+  background-color: #fff; }
+#hd .fix_box .btn_box {
+  transform-style: preserve-3d;
+  transition: 0.4s ease-in;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+  /*  label tag end */ }
+#hd .fix_box .btn_box label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(38, 41, 51, 0.9);
+  position: relative;
+  /* p tag end */ }
+#hd .fix_box .btn_box label p {
+  display: block;
+  width: 60%;
+  height: 80%;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 10%; }
+#hd .fix_box .btn_box label p span {
+  position: absolute; }
+#hd .fix_box .btn_box label p span:nth-child(1) {
+  display: block;
+  width: 100%;
+  height: 10%;
+  background-color: rgba(38, 41, 51, 0.9);
+  top: 17.5%; }
+#hd .fix_box .btn_box label p span:nth-child(2) {
+  display: block;
+  width: 70%;
+  height: 10%;
+  background-color: rgba(38, 41, 51, 0.9);
+  top: 45%; }
+#hd .fix_box .btn_box label p span:nth-child(3) {
+  display: block;
+  width: 100%;
+  height: 9%;
+  background-color: rgba(38, 41, 51, 0.9);
+  top: 72.5%; }
+#hd .fix_box .menu_box {
+  display: block;
+  clear: both;
+  width: 100%;
+  height: 240px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(255, 255, 255, 0.8);
+  transition: 0.5s ease-in;
+  transform-origin: right top;
+  transform: rotateX(90deg);
+  /* .menu_box ul end */ }
+#hd .fix_box .menu_box ul {
+  display: block;
+  width: 100%;
+  height: 100%; }
+#hd .fix_box .menu_box ul li {
+  display: block;
+  clear: both;
+  width: 100%;
+  height: 25%;
+  border-bottom: 0px solid rgba(31, 45, 21, 0.8);
+  box-sizing: border-box; }
+#hd .fix_box .menu_box ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 60px;
+  text-indent: 10px; }
+
+/* #hd end */
+/* 컨텐츠 박스 선언 */
+.content_box {
+  display: block;
+  clear: both;
+  width: 100%;
+  /* imgbox end */ }
+.content_box .img_box {
+  display: block;
+  width: 100%;
+  height: 540px;
+  position: relative; }
+.content_box .img_box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%; }
+.content_box .img_box img:nth-child(2) {
+  z-index: 2;
+  animation-name: img_ani1;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate; }
+.content_box .work_con {
+  display: block;
+  clear: both;
+  width: 100%; }
+.content_box .work_con img {
+  float: left;
+  height: 230px; }
+.content_box .work_con img:nth-child(odd) {
+  display: block;
+  width: 43%;
+  margin-left: 4.66667%;
+  margin-right: 2.33333%;
+  margin-top: 15px; }
+.content_box .work_con img:nth-child(even) {
+  display: block;
+  width: 43%;
+  margin-left: 2.33333%;
+  margin-right: 4.66667%;
+  margin-top: 15px; }
+.content_box .work_con img:nth-child(1) {
+  background-image: url("./img/w1.jpg");
+  background-size: 100% auto; }
+.content_box .work_con img:nth-child(2) {
+  background-image: url("./img/w2.jpg");
+  background-size: 100% auto; }
+.content_box .work_con img:nth-child(3) {
+  background-image: url("./img/w3.jpg");
+  background-size: 100% auto; }
+.content_box .work_con img:nth-child(4) {
+  background-image: url("./img/w4.jpg");
+  background-size: 100% auto; }
+.content_box .contact {
+  width: 100%;
+  background: #f2f2f2;
+  margin-top: 40px; }
+.content_box .form_box {
+  display: block;
+  clear: both;
+  width: 100%;
+  height: 380px; }
+.content_box .form_box form {
+  display: block;
+  width: 100%;
+  height: 100%; }
+.content_box .form_box form input {
+  display: block;
+  width: 94%;
+  height: 40px;
+  bottom: 0;
+  outline: 0;
+  margin: 0 auto;
+  clear: both;
+  margin-top: 10px;
+  text-indent: 10px; }
+.content_box .form_box form input:nth-child(4) {
+  height: 150px; }
+
+/* content_box end */
+#ft {
+  background-color: #000;
+  display: block;
+  width: 100%;
+  height: 100px; }
+#ft p {
+  color: white;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  text-indent: 10px;
+  font-size: 0.8rem; }
+#ft p a {
+  color: white;
+  font-weight: 300;
+  font-size: 0.8rem; }
+#ft span {
+  display: block;
+  clear: both;
+  width: 160px;
+  height: 30px;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 10px;
+  margin-top: 10px; }
+
+#ft::after {
+  content: 'COPYRIGHT ALL HAS KIM YA HYEO 2018 BY TOUGUE';
+  display: block;
+  width: 100%;
+  height: 70px;
+  clear: both;
+  font-size: 0.5rem;
+  padding: 0;
+  margin-top: 30px;
+  line-height: 70px;
+  text-align: center; }
+
+@keyframes img_ani1 {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+#ckb1:checked ~ .con #hd .fix_box .menu_box {
+  width: 100%;
+  right: 0;
+  transform: rotateX(0deg); }
+
+#ckb1:checked ~ .con #hd .fix_box .btn_box {
+  transform: rotateZ(90deg); }
+
+/*# sourceMappingURL=main_style.css.map */
